@@ -1,0 +1,35 @@
+{
+  "$schema": "https://www.schemastore.org/package.json",
+  "private": true,
+  "name": "roap",
+  "version": "2026.2.11",
+  "description": "A lightweight proxy server designed to overcome Roblox HttpService limitations on internal API endpoints",
+  "homepage": "https://github.com/VoxLenox/RoAP#readme",
+  "bugs": {
+    "url": "https://github.com/VoxLenox/RoAP/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VoxLenox/RoAP.git"
+  },
+  "license": "MIT",
+  "author": "VoxLenox",
+  "type": "commonjs",
+  "main": "none",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "npm i && ([ -f .env ] || (echo \"Creating .env file...\" && cp sample.env .env))",
+    "build": "npm run clean && npm i && npx tsc",
+    "clean": "rm -rfv dist",
+    "start:dev": "NODE_ENV=\"development\" npx tsx --env-file-if-exists=.env --inspect ./src/index.ts",
+    "start:prod": "NODE_ENV=\"production\" node --env-file-if-exists=.env ./dist/index.js"
+  },
+  "engines": {
+    "node": ">=22.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
