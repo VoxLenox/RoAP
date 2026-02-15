@@ -2,7 +2,7 @@
   "$schema": "https://www.schemastore.org/package.json",
   "private": true,
   "name": "roap",
-  "version": "2026.2.11",
+  "version": "1.0.0",
   "description": "A lightweight proxy server designed to overcome Roblox HttpService limitations on internal API endpoints",
   "homepage": "https://github.com/VoxLenox/RoAP#readme",
   "bugs": {
